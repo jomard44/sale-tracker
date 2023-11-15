@@ -9,9 +9,14 @@ bags and individual flavors?
 
 */
 
+let readlineSync = require('readline-sync');
+
 function main(){
-    
+
 //input
+let boxes = parseInt(readlineSync.question("please enter how maney boxes you bought"));
+let bags = parseInt(readlineSync.question("please enter how maney bags you bought"));
+let individualFlavors = parseInt(readlineSync.question("please enter how maney flavors you bought"));
 
 //process
 
