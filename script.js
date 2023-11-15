@@ -14,12 +14,28 @@ let readlineSync = require('readline-sync');
 function main(){
 
 //input
-let boxes = parseInt(readlineSync.question("please enter how maney boxes you bought"));
-let bags = parseInt(readlineSync.question("please enter how maney bags you bought"));
-let individualFlavors = parseInt(readlineSync.question("please enter how maney flavors you bought"));
+let boxes = parseInt(readlineSync.question("please enter how maney boxes you have: "));
+let bags = parseInt(readlineSync.question("please enter how maney bags you have: "));
+let individualFlavors = parseInt(readlineSync.question("please enter how maney flavors you have: "));
+
+let boxesLeft =  parseInt(readlineSync.question("please enter how maney boxes you have left: "));
+let bagsLeft =  parseInt(readlineSync.question("please enter how maney bags you have left: "));
+let individualFlavorsLeft =  parseInt(readlineSync.question("please enter how maney flavors you have left: "));
 
 //process
+//calculate how maney sold
+let boxesSold = boxes - boxesLeft;
+let bagsSold= bags - bagsLeft;
+let individualFlavorsSold = individualFlavors - individualFlavorsLeft;
 
 //output
+console.log("you sold " + boxesSold + " boxes ");
+console.log("you sild " + bagsSold + " bags");
+console.log("you sold " + individualFlavorsSold + " flavors");
 
+}
+
+if (require.main === module)
+{
+    main();
 }
